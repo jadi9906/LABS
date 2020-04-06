@@ -1,2 +1,0 @@
-This repository will be a collection of the projects completed in EBIO 4420 in the Spring 2020 semester.
-This class will cover aspects of computational biology skills; focused on using git, github, and R. 
