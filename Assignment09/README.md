@@ -30,7 +30,9 @@ Because there was no single study associated with this dataset, all of the metho
 11. Perform a cor.test to test for correlation and a associated p-value
 
 ##### **Results**
-When a geom_smooth was plotted, there seemed to be no real correlation between earlier stay-at-home orders and rates of cases, the plot looked like this: [![Finalgeom-smoothplot.png](https://i.postimg.cc/50TvY6xp/Finalgeom-smoothplot.png)](https://postimg.cc/47vnj4Hh)
+When a geom_smooth was plotted, there seemed to be no real correlation between earlier stay-at-home orders and rates of cases, the plot looked like this:
+
+[![Finalgeom-smoothplot.png](https://i.postimg.cc/50TvY6xp/Finalgeom-smoothplot.png)](https://postimg.cc/47vnj4Hh)
 
 This plot does not indicate a correlation between early stay-at-home dates and lower rates of cases, even with geom_smooth. Another way to test for a correlation is using cor.test function, which calculates a correlation coefficient and a p-value. Unfortunately, the p-value was 0.25, which iss much to high to be statistically significant, and the correlation coefficient was -0.21, not close to 1, which indicates correlation. These results suggest my hypothesis was either wrong, or there are more variables not being accounted for. One guess for why this did not work was that the announcement of a national emergency and voluntary closing of businesses caused most people to stay at home even before the state order. Also, calculating rate with the slope of cases over time is not exactly the most accurate or peerfect way to calculate rate. 
 
