@@ -7,14 +7,15 @@ This study will investigate the relationship between transmission "rate" of COVI
 ##### **Methods**
 ###### Source: https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-states.csv
 This dataset is from the New York Times Github repository, and the actual data is compiled from multiple different sources, including public officials, news conferences, data releases, and the public health system. A case is counted when a patient tests positive for COVID-19, and is confirmed by a federal or state government. Each day is a cumulative count of both cases and deaths.
-This New York Times dataset did not have one study or project associated with the data. This dataset is used for the interactive COVID-19 maps available on the site [here](https://www.nytimes.com/interactive/2020/us/coronavirus-us-cases.html), and [here](https://www.nytimes.com/news-event/coronavirus). All of the data, metadata and associated packages can be found in their [Github repository](https://github.com/nytimes/covid-19-data)
+This New York Times dataset did not have one study or project associated with the data. This dataset is used for the interactive COVID-19 maps available on the site [here](https://www.nytimes.com/interactive/2020/us/coronavirus-us-cases.html), and [here](https://www.nytimes.com/news-event/coronavirus). All of the data, metadata and associated packages can be found in their [Github repository](https://github.com/nytimes/covid-19-data).
+
 Stay at home order dates were found [here.](https://www.littler.com/publication-press/publication/stay-top-stay-home-list-statewide)
 ###### Type of data
 Format of this data is a Comma Separated Spreadsheet (.CSV)
 The size of the data is 68,057 bytes, 2274 x 5
 The layout of this data set has the following five columns: 
 Date, State, Fips, Cases, Deaths
-Fips is a widely used code for identifying geographic locations
+Fips is a widely used code for identifying geographic locations.
 ###### Methods
 Because there was no single study associated with this dataset, all of the methods shown will be my own.
 1. Read in the dataset and got a feel for the dimensions
@@ -34,7 +35,7 @@ When a geom_smooth was plotted, there seemed to be no real correlation between e
 
 [![Finalgeom-smoothplot.png](https://i.postimg.cc/50TvY6xp/Finalgeom-smoothplot.png)](https://postimg.cc/47vnj4Hh)
 
-This plot does not indicate a correlation between early stay-at-home dates and lower rates of cases, even with geom_smooth. Another way to test for a correlation is using cor.test function, which calculates a correlation coefficient and a p-value. Unfortunately, the p-value was 0.25, which iss much to high to be statistically significant, and the correlation coefficient was -0.21, not close to 1, which indicates correlation. These results suggest my hypothesis was either wrong, or there are more variables not being accounted for. One guess for why this did not work was that the announcement of a national emergency and voluntary closing of businesses caused most people to stay at home even before the state order. Also, calculating rate with the slope of cases over time is not exactly the most accurate or peerfect way to calculate rate. 
+This plot does not indicate a correlation between early stay-at-home dates and lower rates of cases, even with geom_smooth. Another way to test for a correlation is using cor.test function, which calculates a correlation coefficient and a p-value. Unfortunately, the p-value was 0.25, which iss much to high to be statistically significant, and the correlation coefficient was -0.21, not close to 1, which indicates correlation. These results suggest my hypothesis was either wrong, or there are more variables not being accounted for. One guess for why this did not work was that the announcement of a national emergency and voluntary closing of businesses caused most people to stay at home even before the state order. Also, calculating rate with the slope of cases over time is not exactly the most accurate or perfect way to calculate rate. 
 
 
 ##### **References cited**
